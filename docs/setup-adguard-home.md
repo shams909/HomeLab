@@ -80,5 +80,8 @@ After investing much  time in my homelab i came to a conclution that only ad blo
 
 `My that homelab laptop runs 24/7 and it works fine also blocks ads of my a connected devices but somehow some ads still slips so I alsp use Adguard Home app in my phn and adguard ad blocker extention in my laptop's browser .That's how doesn't pop in anywhere in my workflow. It's works super well.`
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1c31a46a-aa71-493b-80c4-fa7fad5ae133" alt="Mermaid diagram showing a user, bot, and system" width="300">
+</p>
 
 
