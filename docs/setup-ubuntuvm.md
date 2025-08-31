@@ -70,3 +70,7 @@ Find IP:
 
 Connect via SSH in terminal:
 `ssh user@<VM-IP>`
+
+Reboot
+
+voila! Ur ubuntu vm setup is done..now u can access it via ssh.
