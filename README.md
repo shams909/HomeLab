@@ -1,8 +1,8 @@
 # HomeLab
 ##🏡 Homelab Journey – My Mini Data Center
 
-###Turning my laptop into a self-hosted mini data center.
-###Documenting my full homelab journey with Proxmox, Docker, dashboards, AdGuard, Tailscale, and automation scripts.
+Turning my laptop into a self-hosted mini data center.
+Documenting my full homelab journey with Proxmox, Docker, dashboards, AdGuard, Tailscale, and automation scripts.
 
 🔥 About This Project
 
