@@ -9,24 +9,24 @@
 1st remove Docker AdGuard Home if u have installed it with docker before
 
 # Navigate to your adguard directory
-cd ~/adguard
+`cd ~/adguard`
 
 # Stop and remove the container
-docker-compose down
+`docker-compose down`
 
 # Remove the docker network and volumes (optional cleanup)
-docker network rm adguard_default
-docker volume rm adguard_data
+`docker network rm adguard_default`
+`docker volume rm adguard_data`
 
 #Install AdGuard Home Natively
 
 # Download and run the official installer
-curl -s -S -L https://raw.githubusercontent.com/AdGuardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
+`curl -s -S -L https://raw.githubusercontent.com/AdGuardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v`
 
-# Follow the interactive prompts - choose:
-# - Installation path: /opt/AdGuardHome
-# - Port: 3000 for admin, 53 for DNS
-# - Auto-start: Yes
+ Follow the interactive prompts - choose:
+ - Installation path: /opt/AdGuardHome
+ - Port: 3000 for admin, 53 for DNS
+ - Auto-start: Yes
 
  #Configure AdGuard Home
 
@@ -52,7 +52,7 @@ Deafult Gatweay: ur_router_ip `(which u use to login into ur router's admin page
 
 Primary DNS: ubuntu_vm_ip `(192.168.x.x)`
 
-Secondary DNS: 0.0.0.0 (or leave blank) `but dont set it to 1.1.1.1(cloudfare) or 8.8.8.8(google) cos ur router will then bypass ur adguard filer due to restriction and this happend for me and it literally killed a lots of time`
+##Secondary DNS: 0.0.0.0 (or leave blank) `but dont set it to 1.1.1.1(cloudfare) or 8.8.8.8(google) cos ur router will then bypass ur adguard filer due to restriction and this happend for me and it literally killed a lots of time`
 `(Cons of not setting a Secondary Ip in the router : If somehow ur Ubuntu_vm machine (for me my laptop) breaks ur whole internet will go down) (Pros : But wihout setting the secondary ip it will give u reliable performance over full network)`
 `My  recommendation is keep the secindary dns empty`
 
