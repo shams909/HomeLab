@@ -13,10 +13,15 @@ I started with an old laptop and grew it into a mini data center with virtualiza
 
 Component	Details
 💻 Laptop	HP Pavilion – Intel i7 7th Gen U-series, Nvidia 940MX
+
 💾 Memory	20GB RAM (4GB soldered + 16GB stick)
+
 🔧 Storage	SATA SSD (previously had 1TB HDD, RIP 🥹)
+
 📡 Router	TP-Link Archer C6 V4
+
 🖧 Network	Cat6 Ethernet (700+ Mbps vs <100 Mbps on Cat5e 💀)
+
 ⚙️ Core Software Stack
 
 🖥️ Proxmox VE → virtualization & VM management
