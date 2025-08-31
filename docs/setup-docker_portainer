@@ -1,0 +1,41 @@
+#Portainer Installation 
+Portainer is used as a management interface for containerized environments, primarily Docker and Kubernetes.It provides a user-friendly graphical user interface (GUI) that simplifies the deployment, management, and monitoring of containers, images, networks, volumes, and other related resources
+
+##It's recommended to use portainer
+
+#Installtion
+
+##NOTE: I used the cat for yml file cos in Arch Linux the kitty thermianl is not supporting the formet in normal formet.Also vim works u can try it out by urself.
+cat > docker-compose.yml << 'EOF'
+version: '3.8'
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+      - "9443:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer_data:/data
+EOF
+
+#Then verify the file is correct 
+
+cat docker-compose.yml
+
+#Run Portainer
+
+docker-compose up -d
+
+#Access Portainer in ur browser
+
+https://<ur_ubuntu_vm's_ip>:9443
+
+##⚠️Caution!
+
+9443 = The secure HTTPS port we mapped for Portainer
+
+https:// = Important! It must be HTTPS, not HTTP
