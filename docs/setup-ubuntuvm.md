@@ -12,15 +12,15 @@
 
 - Go to **Proxmox Web UI → Create VM**
 
-- Name: ubuntu-server
+- Name: `ubuntu-server`
 
 - OS: Select the uploaded ISO
 
 - System:
 
-- BIOS: `OVMF` (UEFI) (if supported)
+  - BIOS: `OVMF` (UEFI) (if supported)
 
-- Machine: `q35`
+  - Machine: `q35`
 
 - Disks:
 
@@ -62,10 +62,11 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt install curl wget git vim net-tools htop -y
 
-5. Enable Remote Access (revommended)
+5. Enable Remote Access `recommended`
 
 Find IP:
-ip a
+
+`ip a`
 
 Connect via SSH in terminal:
-ssh user@<VM-IP>
+`ssh user@<VM-IP>`
