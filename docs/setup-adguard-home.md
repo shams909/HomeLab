@@ -76,9 +76,9 @@ At first search it might seem like its slower but thanks to dns caching and it w
 
 But ocatinally u can a feel a little bit latency but a few ms latency is worth of that privacy. Also you will get used to it.Also ur internet speed will be same as it used to be also it will feel even faster after these steps.
 
-After investing much  time in my homelab i came to a conclution that only ad blocer running 24/7 on the machine won't block all the ads. So its recommended to use adguard phn app also use a browser extention in ur laptop or pc for maximum protection.
+After investing much  time in my homelab I came to a conclution that only ad blocer running 24/7 on the machine won't block all the ads. So its recommended to use adguard phn app also use a browser extention in ur laptop or pc for maximum protection.
 
-`My that homelab laptop runs 24/7 and it works fine also blocks ads of my a connected devices but somehow some ads still slips so I alsp use Adguard Home app in my phn and adguard ad blocker extention in my laptop's browser .That's how doesn't pop in anywhere in my workflow. It's works super well.`
+`My that homelab laptop runs 24/7 and it works fine also blocks ads of my all connected devices but somehow some ads still slips so I alsp use Adguard Home app in my phn and adguard ad blocker extention in my laptop's browser .That's how doesn't pop in anywhere in my workflow. It's works super well.`
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1c31a46a-aa71-493b-80c4-fa7fad5ae133" alt="Mermaid diagram showing a user, bot, and system" width="300">
