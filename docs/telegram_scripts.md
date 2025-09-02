@@ -1,3 +1,5 @@
+#NOte for better view and usage first download this file then open this file with any code and then copy paste the code and the formet will be alright and u r good to go cos in github i saw the code formet isn't showing in favoured way
+
 #For Telegram Automation
 
  ##First, Create the Scripts Directory
@@ -352,3 +354,6 @@ Load average shows:
 4.00 on a 4-core CPU = fully loaded
 
 0.00 means your homelab is running perfectly with no strain!
+
+
+
