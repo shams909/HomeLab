@@ -7,16 +7,16 @@
 cat > ~/scripts/telegram-alert.sh << 'EOF'
 #!/bin/bash
 
-# Your Telegram Bot Token (get from @BotFather)
+#Your Telegram Bot Token (get from @BotFather)
 TELEGRAM_BOT_TOKEN="YOUR_BOT_TOKEN_HERE"
 
-# Your Chat ID (message your bot, then visit: https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates)
+#Your Chat ID (message your bot, then visit: https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates)
 TELEGRAM_CHAT_ID="YOUR_CHAT_ID_HERE"
 
-# The message to send
+#The message to send
 MESSAGE="$1"
 
-# Send message via Telegram API
+#Send message via Telegram API
 curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
      -d "chat_id=$TELEGRAM_CHAT_ID&text=$MESSAGE" > /dev/null
 EOF
@@ -29,11 +29,15 @@ chmod +x ~/scripts/telegram-alert.sh
 `System Health`
 #!/bin/bash
 
-# System & Docker Health Report
+# Create the scripts directory if it doesn't exist
+mkdir -p ~/scripts/
+
+# Create the system health script with proper EOF formatting
+cat > ~/scripts/system-health.sh << 'EOF'
+#!/bin/bash
+#System & Docker Health Report
 echo "🔄 Running system health check..."
-
 DATE=$(date "+%Y-%m-%d %I:%M:%S %p")
-
 REPORT="🏠 System & Docker - $DATE
 ────────────────
 🖥️ SYSTEM
@@ -54,10 +58,12 @@ Power: $(if command -v acpi &>/dev/null && acpi -b &>/dev/null; then echo "🔋 
 
 ~/scripts/telegram-alert.sh "$REPORT"
 echo "✅ System health check completed!"
+EOF
 
+# Make the script executable
+chmod +x ~/scripts/system-health.sh
 
-
-
+echo "✅ Script created successfully at ~/scripts/system-health.sh"
 `Battery Monitor Script`
 cat > ~/scripts/battery-monitor.sh << 'EOF'
 #!/bin/bash
