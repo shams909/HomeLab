@@ -1,4 +1,4 @@
-#NOte for better view and usage first download this file then open this file with any code and then copy paste the code and the formet will be alright and u r good to go cos in github i saw the code formet isn't showing in favoured way
+#NOTE: for better view and usage first download this file then open this file with any code and then copy paste the code and the formet will be alright and u r good to go cos in github i saw the code formet isn't showing in favoured way
 
 #For Telegram Automation
 
