@@ -63,7 +63,7 @@ Telegram Bot – system health monitoring & alerts
 
 ✅ Daily health-check scripts (CPU, RAM, disk, services)
 ✅ Telegram notifications every 3 hours
-🔜 Grafana + Prometheus dashboards (planned)
+🔜 Dashy + Homarr(running currently)  Grafana + Prometheus dashboards (planned)
 
 🔐 Networking & Security
 
