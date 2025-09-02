@@ -20,6 +20,8 @@ Documenting my full homelab journey with Proxmox, Docker, dashboards, AdGuard, T
 This repo is my logbook + portfolio for my homelab journey.
 I started with an old laptop and grew it into a mini data center with virtualization, automation, networking, and monitoring. Everything is open, documented, and evolving.
 
+<img width="1141" height="596" alt="image" src="https://github.com/user-attachments/assets/0e760942-2d09-42c7-a514-56a4c2ab762e" />
+
 💻 Hardware Setup
 
 Component	Details
@@ -99,4 +101,3 @@ I believe homelabs are the best way to learn real-world DevOps, networking, and 
 ⚡ Stay tuned — this homelab is evolving into a self-hosted data center!
 
 
-<img width="1141" height="596" alt="image" src="https://github.com/user-attachments/assets/0e760942-2d09-42c7-a514-56a4c2ab762e" />
