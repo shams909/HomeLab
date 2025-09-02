@@ -1,4 +1,15 @@
-# HomeLab
+# HomeLab 🚀  
+
+![Proxmox](https://img.shields.io/badge/Proxmox-VE-orange?logo=proxmox)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-Server-E95420?logo=ubuntu)
+![Docker](https://img.shields.io/badge/Docker-Engine-2496ED?logo=docker)
+![Portainer](https://img.shields.io/badge/Portainer-UI-13BEF9?logo=portainer)
+![Tailscale](https://img.shields.io/badge/Tailscale-VPN-000000?logo=tailscale)
+![AdGuard](https://img.shields.io/badge/AdGuard-Home-68BC71?logo=adguard)
+![Homarr](https://img.shields.io/badge/Homarr-Dashboard-5D87BF?logo=windows-terminal)
+![Dashy](https://img.shields.io/badge/Dashy-Startpage-4CAF50?logo=google-chrome)
+![Linux](https://img.shields.io/badge/Linux-Systems-333333?logo=linux)
+
 ##🏡 Homelab Journey – My Mini Data Center
 
 Turning my laptop into a self-hosted mini data center.
@@ -86,3 +97,6 @@ This repo is my knowledge base + inspiration log.
 I believe homelabs are the best way to learn real-world DevOps, networking, and automation.
 
 ⚡ Stay tuned — this homelab is evolving into a self-hosted data center!
+
+
+<img width="1141" height="596" alt="image" src="https://github.com/user-attachments/assets/0e760942-2d09-42c7-a514-56a4c2ab762e" />
