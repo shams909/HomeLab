@@ -84,4 +84,8 @@ After investing much  time in my homelab I came to a conclution that only ad blo
   <img src="https://github.com/user-attachments/assets/1c31a46a-aa71-493b-80c4-fa7fad5ae133" alt="Mermaid diagram showing a user, bot, and system" width="300">
 </p>
 
+#MY Adguard Home Dashboard
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ef2d143f-ee7a-4a95-8139-eb5042f6d202" />
+
 
