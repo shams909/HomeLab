@@ -30,15 +30,15 @@ services:
       - ./portainer_data:/data
 EOF
 
-Verify the file
+### Step 2:Verify the file
 
 cat docker-compose.yml
 
-Run Portainer
+### Step 3:Run Portainer
 
 docker-compose up -d
 
-Step 4: Access Portainer
+### Step 4: Access Portainer
 
 Open your browser and go to:
 
