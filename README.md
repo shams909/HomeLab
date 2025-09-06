@@ -10,7 +10,7 @@
 ![Dashy](https://img.shields.io/badge/Dashy-Startpage-4CAF50?logo=google-chrome)
 ![Linux](https://img.shields.io/badge/Linux-Systems-333333?logo=linux)
 
-##🏡 Homelab Journey – My Mini Data Center
+## 🏡 Homelab Journey – My Mini Data Center
 
 Turning my laptop into a self-hosted mini data center.
 Documenting my full homelab journey with Proxmox, Docker, dashboards, AdGuard, Tailscale, and automation scripts.
