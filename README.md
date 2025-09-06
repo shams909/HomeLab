@@ -15,16 +15,17 @@
 Turning my laptop into a self-hosted mini data center.
 Documenting my full homelab journey with Proxmox, Docker, dashboards, AdGuard, Tailscale, and automation scripts.
 
-🔥 About This Project
+### 🔥 About This Project
 
 This repo is my logbook + portfolio for my homelab journey.
 I started with an old laptop and grew it into a mini data center with virtualization, automation, networking, and monitoring. Everything is open, documented, and evolving.
 
 <img width="1141" height="596" alt="image" src="https://github.com/user-attachments/assets/0e760942-2d09-42c7-a514-56a4c2ab762e" />
 
-💻 Hardware Setup
+### 💻 Hardware Setup
 
-Component	Details
+Component	Details:
+
 💻 Laptop	HP Pavilion – Intel i7 7th Gen U-series, Nvidia 940MX
 
 💾 Memory	20GB RAM (4GB soldered + 16GB stick)
@@ -93,11 +94,11 @@ Telegram Bot – system health monitoring & alerts
 
  High Availability (future dream 🚀)
 
-🤝 Why I’m Sharing
+### 🤝 Why I’m Sharing
 
 This repo is my knowledge base + inspiration log.
 I believe homelabs are the best way to learn real-world DevOps, networking, and automation.
 
-⚡ Stay tuned — this homelab is evolving into a self-hosted data center!
+### ⚡ Stay tuned — this homelab is evolving into a self-hosted data center!
 
 
