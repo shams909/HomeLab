@@ -50,7 +50,7 @@ Component	Details:
 
 🤖 Automation Scripts → health checks & Telegram bot updates
 
-🛠️ Services Running
+### 🛠️ Services Running
 
 Portainer – manage Docker containers
 
@@ -60,13 +60,13 @@ Homarr + Dashy – dashboards for everything in one place
 
 Telegram Bot – system health monitoring & alerts
 
-📊 Monitoring & Automation
+### 📊 Monitoring & Automation
 
 ✅ Daily health-check scripts (CPU, RAM, disk, services)
 ✅ Telegram notifications every 3 hours
 🔜 Dashy + Homarr(running currently)  Grafana + Prometheus dashboards (planned)
 
-🔐 Networking & Security
+### 🔐 Networking & Security
 
 🔒 Tailscale VPN → private, secure access
 
@@ -74,7 +74,7 @@ Telegram Bot – system health monitoring & alerts
 
 🛡️ Firewall + IDS/IPS coming soon
 
-🗺️ Roadmap
+### 🗺️ Roadmap
 
  Proxmox VE setup
 
