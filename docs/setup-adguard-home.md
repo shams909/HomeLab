@@ -1,24 +1,24 @@
-#Install AdGuard Home Natively on Ubuntu VM
+# Install AdGuard Home Natively on Ubuntu VM
 
 `I first tried the AdGuard Home in the docker but there was problem like internet was slow also it wasn't blocking the ads as expected and the speed i was getting was very much slow.Then I tried different config but didn't got the expected result. I was getting the wifi speed inly 2-3 Mbps which is way low than my actual speed(700+ with ethernet) so i tried to see if my vm and the proxmox have any issue but surprisingly the internal connection between them was 18.7 Gbits/sec...like holy shit man it's insane..Then i tried to install it nativly in Ubuntu VM then i succeed and I got the internet speed way better like normal wifi speed i get day by day around 150-200 Mbps in daytime and in the late night after 12 AM i get around 300+ Mbps via wifi.`
 
 `So I'd recommend to install the Adguard home nativly on ubuntu vm else if Adguard Home doesn't work for u properly u can try the Pi-hole.`
 
-#insttalltion (Nativly)
+## insttalltion (Nativly)
 
 1st remove Docker AdGuard Home if u have installed it with docker before
 
-# Navigate to your adguard directory
+## Navigate to your adguard directory
 `cd ~/adguard`
 
-# Stop and remove the container
+## Stop and remove the container
 `docker-compose down`
 
-# Remove the docker network and volumes (optional cleanup)
+## Remove the docker network and volumes (optional cleanup)
 `docker network rm adguard_default`
 `docker volume rm adguard_data`
 
-#Install AdGuard Home Natively
+# Install AdGuard Home Natively
 
 # Download and run the official installer
 `curl -s -S -L https://raw.githubusercontent.com/AdGuardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v`
