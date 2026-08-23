@@ -1,22 +1,30 @@
-#Dashy Installation
+# Dashy Installation
 
-`Pull the latest image`
+## Pull the latest image
 
-docker pull lissy93/dashy:2.1.1  `Dashy recommends using a version tag, not just latest. SO I grabbed the current stable release (2.1.1)`
+Dashy recommends using a version tag, not just `latest`.
 
-Now,run Dashy
+```bash
+docker pull lissy93/dashy:2.1.1
+```
 
+## Run Dashy
+
+```bash
 docker run -d \
   --name dashy \
   -p 8080:80 \
   lissy93/dashy:2.1.1
+```
 
-Now open in your browser:
+## Access Dashy
 
+Open your browser and navigate to:
+
+```text
 http://<my_ubuntu_vm_ip>:8080/
+```
 
-And u r all set.
+And you are all set.
 
-Then set the yaml file according to ur preference of layout.
-
-
+Then configure the YAML file according to your preference of layout.
