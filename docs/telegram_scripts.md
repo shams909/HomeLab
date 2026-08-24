@@ -1,34 +1,43 @@
-#NOTE: for better view and usage first download this file then open this file with any code and then copy paste the code and the formet will be alright and u r good to go cos in github i saw the code formet isn't showing in favoured way
+> **NOTE**: For better viewing and usage, first download this file, open it in any code editor, and copy-paste the code from there. The formatting will be preserved. I noticed the code format isn't showing ideally on GitHub.
 
-#For Telegram Automation
+# For Telegram Automation
 
- ##First, Create the Scripts Directory
-`mkdir -p ~/scripts`
+## First, Create the Scripts Directory
 
-`Telegram Alert`
+```bash
+mkdir -p ~/scripts
+```
+
+## Telegram Alert
+
+```bash
 cat > ~/scripts/telegram-alert.sh << 'EOF'
 #!/bin/bash
 
-#Your Telegram Bot Token (get from @BotFather)
+# Your Telegram Bot Token (get from @BotFather)
 TELEGRAM_BOT_TOKEN="YOUR_BOT_TOKEN_HERE"
 
-#Your Chat ID (message your bot, then visit: https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates)
+# Your Chat ID (message your bot, then visit: https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates)
 TELEGRAM_CHAT_ID="YOUR_CHAT_ID_HERE"
 
-#The message to send
+# The message to send
 MESSAGE="$1"
 
-#Send message via Telegram API
+# Send message via Telegram API
 curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
      -d "chat_id=$TELEGRAM_CHAT_ID&text=$MESSAGE" > /dev/null
 EOF
+```
 
 Make it executable:
 
+```bash
 chmod +x ~/scripts/telegram-alert.sh
+```
 
+## System Health
 
-`System Health`
+```bash
 #!/bin/bash
 
 # Create the scripts directory if it doesn't exist
@@ -37,7 +46,7 @@ mkdir -p ~/scripts/
 # Create the system health script with proper EOF formatting
 cat > ~/scripts/system-health.sh << 'EOF'
 #!/bin/bash
-#System & Docker Health Report
+# System & Docker Health Report
 echo "🔄 Running system health check..."
 DATE=$(date "+%Y-%m-%d %I:%M:%S %p")
 REPORT="🏠 System & Docker - $DATE
@@ -66,7 +75,11 @@ EOF
 chmod +x ~/scripts/system-health.sh
 
 echo "✅ Script created successfully at ~/scripts/system-health.sh"
-`Battery Monitor Script`
+```
+
+## Battery Monitor Script
+
+```bash
 cat > ~/scripts/battery-monitor.sh << 'EOF'
 #!/bin/bash
 
@@ -97,12 +110,17 @@ elif [ "$BATTERY_LEVEL" -le 50 ]; then
     ~/scripts/telegram-alert.sh "🔋 Battery: $BATTERY_LEVEL% remaining."
 fi
 EOF
+```
 
 Make it executable:
 
+```bash
 chmod +x ~/scripts/battery-monitor.sh
+```
 
-`Internet Monitor`
+## Internet Monitor
+
+```bash
 cat > ~/scripts/internet-monitor.sh << 'EOF'
 #!/bin/bash
 
@@ -118,13 +136,17 @@ if ! nslookup google.com > /dev/null 2>&1; then
     exit 1
 fi
 EOF
+```
 
 Make it executable:
 
+```bash
 chmod +x ~/scripts/internet-monitor.sh
+```
 
+## Service Monitor Script
 
-`service monitor script`
+```bash
 cat > ~/scripts/service-monitor.sh << 'EOF'
 #!/bin/bash
 
@@ -140,22 +162,30 @@ if ! systemctl is-active docker >/dev/null 2>&1; then
     sudo systemctl restart docker
 fi
 EOF
+```
 
-Make it executable 
+Make it executable:
+
+```bash
 chmod +x ~/scripts/service-monitor.sh
+```
 
-#Set Your Timezone on the Ubuntu VM to get the tie sync to ur local time
+## Set Your Timezone on the Ubuntu VM
 
-# Set timezone to UTC(According to ur location)
+To sync the time to your local time.
+
+```bash
+# Set timezone to UTC (According to your location)
 sudo timedatectl set-timezone Asia/___  # or Asia/_any_ depending on your location
 
 # Verify timezone
 timedatectl
 date
+```
 
+## Daily Health Check Scripts
 
-`Daily Health check scripts`
-
+```bash
 cat > ~/scripts/daily-health-check.sh << 'EOF'
 #!/bin/bash
 
@@ -193,24 +223,30 @@ Next update: $(date -d "+3 hours" "+%I:%M %p")"
 
 echo "✅ Health check completed!"
 EOF
+```
 
 🚀 Make executable and test:
 
+```bash
 chmod +x ~/scripts/daily-health-check.sh
 ~/scripts/daily-health-check.sh
+```
 
-`The Confirmation Message Script`
-# Send  confirmation with proper time format
+## The Confirmation Message Script
+
+```bash
+# Send confirmation with proper time format
 ~/scripts/telegram-alert.sh "✅ All monitoring systems activated! 
 • Battery checks every 5 min
 • Internet checks every 10 min  
 • Service checks every 15 min
 • Full health reports every 3 hours
 Next health report: $(date -d "+3 hours" "+%I:%M %p")"
+```
 
+The output will be something like that:
 
-
-`Now the output will be somthing like that :`
+```text
 🏠 Homelab Status - 2025-08-28 06:00:02 PM
 ────────────────
 🖥️ SYSTEM
@@ -232,9 +268,11 @@ Power: 🔌 AC Connected
 ────────────────
 ✅ All systems optimal!
 Next update: 09:00 PM
+```
 
+## Setup Cron Jobs (Automated Monitoring)
 
-#Setup Cron Jobs (Automated Monitoring)
+```bash
 crontab -l > /tmp/mycron 2>/dev/null
 
 # Add the monitoring jobs
@@ -254,13 +292,20 @@ rm /tmp/mycron
 # 0 9 * * *  = 9:00 AM daily
 # 0 18 * * * = 6:00 PM daily
 # 0 12 * * * = 12:00 PM daily
+```
 
-Test It Immediately
+Test It Immediately:
 
+```bash
 # Run the health check to make sure it works
 ~/scripts/daily-health-check.sh
-#Optional: Add Weekly Summary
-# Create a weekly summary script
+```
+
+## Optional: Add Weekly Summary
+
+Create a weekly summary script:
+
+```bash
 cat > ~/scripts/weekly-summary.sh << 'EOF'
 #!/bin/bash
 WEEKLY_REPORT="📅 *Weekly Homelab Summary* - $(date "+%Y-%m-%d")
@@ -279,29 +324,25 @@ chmod +x ~/scripts/weekly-summary.sh
 
 # Run every Sunday at 10:00 AM
 (crontab -l 2>/dev/null; echo "0 10 * * 0 ~/scripts/weekly-summary.sh") | crontab -
+```
 
+## ⚠️ IMPORTANT: Configure Your Telegram Bot
 
-⚠️ IMPORTANT: Configure Your Telegram Bot
-Message @BotFather on Telegram
+1. Message `@BotFather` on Telegram.
+2. Send `/newbot` and follow the instructions.
+3. Get your `BOT_TOKEN`.
+4. Message your new bot, then visit:
+   `https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates`
+5. Find your `CHAT_ID` in the response.
+6. Edit `~/scripts/telegram-alert.sh` and replace:
+   - `YOUR_BOT_TOKEN_HERE` with your actual token.
+   - `YOUR_CHAT_ID_HERE` with your actual chat ID.
 
-Send /newbot and follow instructions
+## Add Dedicated AdGuard Monitoring (Optional)
 
-Get your BOT_TOKEN
+`adguard-monitor.sh`
 
-Message your new bot, then visit:
-https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates
-
-Find your CHAT_ID in the response
-
-Edit ~/scripts/telegram-alert.sh and replace:
-
-YOUR_BOT_TOKEN_HERE with your actual token
-
-YOUR_CHAT_ID_HERE with your actual chat ID
-
-#Also ad Adguard dedicated monitoring if u want
-
-adguard-monitor.sh
+```bash
 #!/bin/bash
 
 # Dedicated AdGuard Home Monitoring
@@ -334,26 +375,20 @@ $(if [ "$AG_STATUS" = "active" ]; then echo "✅ Service healthy"; else echo "�
 
 ~/scripts/telegram-alert.sh "$REPORT"
 echo "✅ AdGuard monitoring completed!"
+```
 
-#Note
+## Note
+
 `System Load: 0.00, 0.00, 0.00`
+
 🎉 It means your system is:
-
-Not overloaded
-
-Running smoothly
-
-Has plenty of CPU headroom
+- Not overloaded
+- Running smoothly
+- Has plenty of CPU headroom
 
 Load average shows:
+- `0.00` = system is idle
+- `1.00` = CPU is 100% utilized
+- `4.00` on a 4-core CPU = fully loaded
 
-0.00 = system is idle
-
-1.00 = CPU is 100% utilized
-
-4.00 on a 4-core CPU = fully loaded
-
-0.00 means your homelab is running perfectly with no strain!
-
-
-
+`0.00` means your homelab is running perfectly with no strain!
