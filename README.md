@@ -28,7 +28,7 @@ Component	Details:
 
 💻 Laptop	HP Pavilion – Intel i7 7th Gen U-series, Nvidia 940MX
 
-💾 Memory	20GB RAM (4GB soldered + 16GB stick)
+💾 Memory	12GB RAM (4GB soldered + 12GB stick)
 
 🔧 Storage	SATA SSD (previously had 1TB HDD, RIP 🥹)
 
