@@ -99,6 +99,7 @@ Telegram Bot – system health monitoring & alerts
 This repo is my knowledge base + inspiration log.
 I believe homelabs are the best way to learn real-world DevOps, networking, and automation.
 
-### ⚡ Stay tuned — this homelab is evolving into a self-hosted data center!
+### ⚡ Stay tuned — this homelab is evolving into a self-hosted data center!...
+
 
 
