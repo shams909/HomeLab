@@ -1,4 +1,4 @@
-> **NOTE**: For better viewing and usage, first download this file, open it in any code editor, and copy-paste the code from there. The formatting will be preserved. I noticed the code format isn't showing ideally on GitHub.
+⁸> **NOTE**: For better viewing and usage, first download this file, open it in any code editor, and copy-paste the code from there. The formatting will be preserved. I noticed the code format isn't showing ideally on GitHub.
 
 # For Telegram Automation
 
@@ -391,4 +391,4 @@ Load average shows:
 - `1.00` = CPU is 100% utilized
 - `4.00` on a 4-core CPU = fully loaded
 
-`0.00` means your homelab is running perfectly with no strain!
+`0.00` means your homelab is running perfectly with no strain!....
